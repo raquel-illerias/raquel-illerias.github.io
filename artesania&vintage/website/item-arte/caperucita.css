@@ -64,24 +64,47 @@ header a {
 
 /* =============== NAV MENU ==============*/
 nav {
-    display:none;
+    display: none;
     flex-direction: column;
     background-color:var(--divisions-backgrounds);
-    
-    
 }
 
-nav a {
+
+
+nav a, .dropdown-container {
     color: black;
     font-weight: 400;
     line-height: 3rem;
     padding: .7rem 0 .7rem 1rem;
+    transition: 1s ease;
     
 }
 
 
-nav a:hover {
+nav a:hover, .sub-cat:hover {
     background-color: gainsboro;
+}
+
+.cat-btn {
+    width: 100%;
+}
+
+.dropdown-cat {
+    display: flex;
+    align-items: center;
+    background-color: var(--divisions-backgrounds);
+    width: 100%;
+    
+}
+
+.dropdown-container {
+    display: none;
+    flex-direction: column;
+}
+
+
+.icon-cat {
+    padding-left: 1.5rem;
 }
 
 /* ================ MAIN =============== */
@@ -110,7 +133,7 @@ figure {
 
 figure img {
     width: 100%;
-    height:50vh;
+    height:auto;
     border-radius: 1.5rem;
 }
 
@@ -128,7 +151,7 @@ figure h2 {
     font-size: 1.2rem;
     text-align: left;
     margin-bottom: 1rem;
-    color: #acacac;
+    color: #545455;
 }
 
 figure p {
@@ -273,7 +296,12 @@ footer .FAQ {
 @media screen and (min-width:480px) {
     .logo {
         width: 50%;
-    }   
+    }  
+    
+    figure img {
+        width: 75%;
+        height:auto;
+    }
 }
 
 @media screen and (min-width:700px) {
@@ -296,7 +324,7 @@ footer .FAQ {
     
     figure img {
         width: 70%;
-        height:50vh;
+        height:auto;
         border-radius: 1.5rem;
     }
 
@@ -352,26 +380,40 @@ footer .FAQ {
         right:0;
         width:50%;
         background-color: var(--bground-header-footer);
+        overflow: hidden;
     }
 
-    .navigation {
-        display: block;
-        position: absolute;
+
+    .cat-btn, .dropdown-cat {
+        background-color: var(--bground-header-footer);
     }
+
+    .categories {
+        position: relative;
+        display: inline-block;
+    }
+
     
-    nav a {
+    nav a, button a {
         position: relative;
         top: 10px;
-        padding:0 2rem;   
+        padding:0 1rem; 
+        height: 3rem;  
     }
+
+    .cat-btn a img {
+        padding: 0;
+        margin: 0;
+    }
+
 
     nav a:hover {
         background-color: var(--divisions-backgrounds);
     }
 
     figure img {
-        width: 60%;
-        height:70vh;
+        width: 50%;
+        height:auto;
     }
 
     .FAQ__division1, .FAQ__division2, .FAQ__division3 {
@@ -410,8 +452,8 @@ footer .FAQ {
     }
 
     figure img {
-        width: 70%;
-        height:85vh;
+        width: 40%;
+        height:auto;
     }
 
     figcaption {
@@ -423,8 +465,8 @@ footer .FAQ {
 @media screen and (min-width:1250px) {
 
     figure img {
-        width: 55%;
-        height:100vh;
+        width: 40%;
+        height:auto;
     }
 
     figcaption {
