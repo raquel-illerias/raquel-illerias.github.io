@@ -65,24 +65,47 @@ header a {
 
 /* =============== NAV MENU ==============*/
 nav {
-    display:none;
+    display: none;
     flex-direction: column;
     background-color:var(--divisions-backgrounds);
-    
-    
 }
 
-nav a {
+
+
+nav a, .dropdown-container {
     color: black;
     font-weight: 400;
     line-height: 3rem;
     padding: .7rem 0 .7rem 1rem;
+    transition: 1s ease;
     
 }
 
 
-nav a:hover {
+nav a:hover, .sub-cat:hover {
     background-color: gainsboro;
+}
+
+.cat-btn {
+    width: 100%;
+}
+
+.dropdown-cat {
+    display: flex;
+    align-items: center;
+    background-color: var(--divisions-backgrounds);
+    width: 100%;
+    
+}
+
+.dropdown-container {
+    display: none;
+    flex-direction: column;
+}
+
+
+.icon-cat {
+    padding-left: 1.5rem;
 }
 
 /* ================ MAIN =============== */
@@ -249,16 +272,28 @@ footer .FAQ {
         background-color: var(--bground-header-footer);
     }
 
-    .navigation {
-        display: block;
-        position: absolute;
+    .cat-btn, .dropdown-cat {
+        background-color: var(--bground-header-footer);
     }
+
+    .categories {
+        position: relative;
+        display: inline-block;
+    }
+
     
-    nav a {
+    nav a, button a {
         position: relative;
         top: 10px;
-        padding:0 2rem;   
+        padding:0 1rem; 
+        height: 3rem;  
     }
+
+    .cat-btn a img {
+        padding: 0;
+        margin: 0;
+    }
+
 
     nav a:hover {
         background-color: var(--divisions-backgrounds);
