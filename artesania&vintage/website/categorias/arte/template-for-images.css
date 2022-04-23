@@ -162,6 +162,10 @@ figcaption ul li:last-child {
     color: #545455;
 }
 
+.img-border {
+    border: 1px solid #7f81813c;
+}
+
 
 /* ============ FOOTER =========== */
 footer {
