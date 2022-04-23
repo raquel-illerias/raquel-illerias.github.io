@@ -116,7 +116,13 @@ main {
 }
 
 .text-box img {
-    margin-bottom:4rem;
+    margin-bottom:2rem;
+}
+
+.text-box p {
+    text-align: left;
+    line-height: 1.5rem;
+    margin: 1.2rem 2rem;
 }
 /* ============ FOOTER =========== */
 footer {
@@ -254,12 +260,11 @@ footer .FAQ {
 }
 
 @media screen and (min-width:1150px) {
-
+    
     .text-box p, .FAQ__division1, .FAQ__division2, .FAQ__division3 {
         font-size: 20px;
         line-height: 2.5rem;
     }
-    
     .logo {
         width: 20%;
     }

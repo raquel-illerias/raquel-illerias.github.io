@@ -115,8 +115,18 @@ main {
     margin-bottom: 7rem;
 }
 
-.text-box img {
-    margin-bottom:4rem;
+
+.text-box p {
+    text-align: left;
+    line-height: 1.5rem;
+    margin: 1.2rem 2rem;
+}
+
+.text-box ol li {
+    text-align: left;
+    list-style: decimal;
+    line-height: 1.5rem;
+    margin: 0 6rem 1.2rem 10rem;
 }
 /* ============ FOOTER =========== */
 footer {
@@ -254,11 +264,12 @@ footer .FAQ {
 }
 
 @media screen and (min-width:1150px) {
-    
+
     .text-box p, .FAQ__division1, .FAQ__division2, .FAQ__division3 {
         font-size: 20px;
         line-height: 2.5rem;
     }
+    
     .logo {
         width: 20%;
     }
