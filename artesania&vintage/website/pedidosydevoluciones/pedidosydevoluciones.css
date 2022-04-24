@@ -129,23 +129,26 @@ main {
 }
 
 .text-box {
-    width:80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 7rem;
+    width:85%;
+    margin: 5rem 2rem 7rem;
 }
 
-.text-box img {
-    margin-bottom:2rem;
+.text-box h2 {
+    margin: 4.5rem 0 3rem;
 }
+
 
 .text-box p {
     text-align: left;
     line-height: 1.5rem;
-    margin: 1.2rem 2rem;
+    margin: 1rem 4rem 0 1.2rem;
+}
+
+.text-box ol li {
+    text-align: left;
+    list-style: decimal;
+    line-height: 1.5rem;
+    margin: 1rem 1.5rem 0 3rem;
 }
 /* ============ FOOTER =========== */
 footer {
@@ -291,6 +294,10 @@ footer .FAQ {
         margin: 0 4rem;
         line-height: 2rem;
     }
+
+    .text-box {
+        width:75%;
+    }
 }
 
 @media screen and (min-width:1150px) {
@@ -306,5 +313,9 @@ footer .FAQ {
     nav a {
         font-size: 1.2rem;
         top: 8px;
+    }
+
+    .text-box {
+        margin-left: 8rem;
     }
 }

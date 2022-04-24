@@ -315,7 +315,9 @@ footer .FAQ {
         right:0;
         width:50%;
         background-color: var(--bground-header-footer);
+        overflow: hidden;
     }
+
 
     .cat-btn, .dropdown-cat {
         background-color: var(--bground-header-footer);
