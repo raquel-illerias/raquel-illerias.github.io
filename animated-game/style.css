@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --pixel-size: 5;
+}
+
+
+.pixaleted {
+    image-rendering: pixelated;
+}
+
+/* =========PAGE FORMATING======== */
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+/* =======BACKGROUND======= */
+
+.background {
+    width: 360px;
+    height: 390px;
+    background-image: url("./images/background-elements/background-2.png"),
+        url("./images/background-elements/cloud-1.png"),
+        url("./images/background-elements/grass-1.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center, top, bottom;
+}
+
+
+/* ======CHARACTERS===== */
+
+.fly {
+    position: absolute;
+    top: 2rem;
+    left: -1rem;
+    animation: fly forwards 10s infinite;
+}
+
+
+@keyframes fly {
+
+    10% {
+        transform: translate(20px, 0px)
+    }
+
+    12% {
+        transform: translate(30px, 10px)
+    }
+
+    14% {
+        transform: translate(32px, 0px);
+    }
+
+    16% {
+        transform: translate(34px, 10px);
+    }
+
+    25% {
+        transform: translate(80px, 0px);
+    }
+
+    30% {
+        transform: translate(120px, -18px)
+    }
+
+    40% {
+        transform: translate(160px, 15px)
+    }
+
+    42% {
+        transform: translate(162px, 10px)
+    }
+
+    44% {
+        transform: translate(164px, 18px);
+    }
+
+    46% {
+        transform: translate(167px, 15px);
+    }
+
+    48% {
+        transform: translate(170px, 20px);
+    }
+
+    50% {
+        transform: translate(200px, 12px);
+    }
+
+    60% {
+        transform: translate(250px, 18px);
+    }
+
+    80% {
+        transform: translate(300px, 5px);
+    }
+
+    100% {
+        transform: translate(345px, 15px);
+    }
+}
+
+
+.dino {
+    width: calc(40px * var(--pixel-size));
+    height: calc(32px * var(--pixel-size));
+    overflow: hidden;
+    position: relative;
+    bottom: 12em;
+    left: 5rem;
+
+}
+
+.dino__sheet {
+    animation: dino__move 1s steps(6) infinite;
+    width: calc(250px * var(--pixel-size));
+    position: absolute;
+}
+ 
+
+@keyframes dino__move {
+    from {
+        transform: translate3d(0px, 0, 0)
+    }
+
+    to {
+        transform: translate3d(-100%, 0, 0)
+    }
+}
+
+
+/* ===== TEXT ===== */
+
+.text {
+    position: absolute;
+    top: 8rem;
+    left: -20px;
+}
+
+.text {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.8rem;
+    font-weight: bolder;
+    color: red;
+    animation: text linear 23s infinite;
+    text-shadow: 2px 2px 10px black,
+                2px 2px 0 black;
+}
+
+@keyframes text {
+    from {
+        left: -10rem;
+    }
+
+    10% {
+        left: 8.5rem;
+    } 
+
+    20% {
+        left: 0;
+    }
+
+    30% {
+        left: 8.5rem;
+    }
+
+    40% {
+        left: 0;
+    }
+
+    50% {
+        left: 8.5rem;
+    }
+
+    60% {
+        left: 0;
+    }
+
+    70% {
+        left: -15rem;
+    }
+    
+    to {
+        left: -20rem;
+    }
+}
+
+
+/* =====AUDIO===== */
+
+.controls {
+    width: 360px;
+    position: absolute;
+    top: 22rem;
+}
+
+
+
+/* ================ MEDIA QUERIES =============== */
+
+/* ==========TABLETS========== */
+
+@media screen and (min-width: 481px) {}
+
+
+/* ==========SMALL SCREENS, LAPTOPS========== */
+
+@media screen and (min-width: 769px) {
+
+}
+
+/* ==========LARGE SCREENS, DESKTOPS========== */
+
+@media screen and (min-width: 1025px) {}
+
+/* ==========EXTRA LARGE SCREENS, TV========== */
+
+@media screen and (min-width: 1201px) {}
