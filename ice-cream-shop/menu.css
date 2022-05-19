@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:wght@300;500;700&family=Oswald:wght@300;400;500&family=Satisfy&display=swap');
+
+
+:root {
+    --family-oswald: 'Oswald', sans-serif;
+    ;
+    --family-archivo: 'Archivo Black', sans-serif;
+    --family-satisfy: 'satisfy', cursive;
+    --family-open: 'Open Sans', sans-serif;
+    --white: #f7f7f7;
+    --black: #090909;
+    --honey: #fdbc01;
+    --light-blue: #084b4c;
+    --cherry: #c23900;
+}
+
+
+/* ================== HTML PAGE FORMATTING ================*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: max-content;
+    background-color: var(--white);
+}
+
+.description {
+    height: 60vh;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.flex__center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.title {
+    font-family: var(--family-oswald);
+    font-weight: 400;
+    font-size: 1.8em;
+    margin: 2rem 0;
+    border-bottom: 1px solid var(--black);
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-family: var(--family-satisfy);
+    font-size: 2.5em;
+}
+
+.para {
+    font-family: var(--family-open);
+    font-weight: 300;
+    margin: 1rem 2.2rem 2.3rem;
+    text-align: center;
+}
+
+.btn-style {
+    color: var(--cherry);
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: var(--family-oswald);
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 5px solid var(--cherry);
+    width: 7em;
+    height: 2em;
+    cursor: pointer;
+    margin-bottom: 4rem;
+    transform: scale(1);
+    transition: .3s ease;
+}
+
+.btn-style:hover {
+    transform: scale(1.1);
+}
+
+
+/* ============= HEADER =============*/
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    padding: .5em 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+header a {
+    color: var(--black);
+    cursor: pointer;
+    font-size: 1.8em;
+    font-family: var(--family-satisfy);
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.animated-gradient {
+    background: linear-gradient(270deg, #8c330e, #700f69, #fdbc01);
+    background-size: 600% 600%;
+    background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    -webkit-animation: AnimationName 5s ease infinite;
+    -moz-animation: AnimationName 5s ease infinite;
+    animation: AnimationName 5s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+    
+header a {
+    color: var(--black);
+    cursor: pointer;
+    font-size: 1.8em;
+    font-weight: 900;
+    font-family: var(--family-satisfy);
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+header svg {
+    cursor: pointer;
+
+}
+
+
+
+/* ============= NAV =============*/
+
+#navigation-menu {
+    width: 100%;
+    background-color: var(--white);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    animation-name: slideIn;
+    animation-duration: 350ms;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#navigation-menu.close {
+    width: 100%;
+    background-color: var(--white);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    animation-name: slideOut;
+    animation-duration: 350ms;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes slideIn {
+    from {
+        right: -100%;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: -100%;
+    }
+}
+
+
+#navigation-menu a {
+    font-family: var(--family-satisfy);
+    font-size: 3.5em;
+    color: var(--dark-font);
+    margin: .5rem 0;
+    padding: 1rem;
+}
+
+#navigation-menu a:nth-of-type(1) {
+    opacity: 0;
+    animation-name: showText;
+    animation-delay: 350ms;
+    animation-duration: 550ms;
+    animation-fill-mode: forwards;
+}
+
+#navigation-menu a:nth-of-type(2) {
+    opacity: 0;
+    animation-name: showText;
+    animation-delay: 450ms;
+    animation-duration: 550ms;
+    animation-fill-mode: forwards;
+}
+
+#navigation-menu a:nth-of-type(3) {
+    opacity: 0;
+    animation-name: showText;
+    animation-delay: 550ms;
+    animation-duration: 550ms;
+    animation-fill-mode: forwards;
+}
+#navigation-menu a:nth-of-type(4) {
+    opacity: 0;
+    animation-name: showText;
+    animation-delay: 650ms;
+    animation-duration: 550ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showText {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#navigation-menu svg {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* ========== BANNER ========== */
+
+main {
+    width: 100%;
+    margin-top: 70px;
+}
+
+section {
+    width: 100%;
+}
+
+.banner {
+    width: 100%;
+    height: 250px;
+    background-color: var(--honey);
+    color: var(--white);
+}
+
+.banner h4 {
+    font-family: var(--family-oswald);
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.banner h1 {
+    font-family: var(--family-archivo);
+    font-weight: 300;
+    font-size: 3em;
+    text-shadow: 2px 2px 1px black;
+}
+
+
+/* ========== PRICE ========== */
+
+.price {
+    width: 300px;
+    height: 15vh;
+    padding:1rem;
+    margin-left: 3rem;
+    font-family: var(--family-oswald);
+    color: var(--black);
+}
+
+.price h4 {
+    font-size: 1.2rem;
+}
+
+.price summary {
+    cursor:pointer;
+    position: relative;
+}
+
+/* ==== ARROW ==== */
+.price summary::after {
+    content: url(./images/arrow-drop-down.svg);
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+/* == ARROW ANIMATION == */
+.price[open] summary::after {
+    animation-name:rotation_open;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotation_open {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+.price:not([open]) summary:after {
+    animation-name:rotation_close;
+    animation-duration: 250ms;
+}
+
+@keyframes rotation_close {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* ==== ANSWERS ==== */
+.price  p {
+    color: rgb(62, 61, 61);
+}
+
+
+.price[open] {
+    animation-name: slideDown;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideDown {
+    from {
+      opacity: 0;
+      height: 0;
+    }
+  
+    to {
+      opacity: 1;
+      height: 50vh;
+    }
+}
+
+/* == TEXT ANIMATION == */
+.price[open] > div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid var(--black);
+    opacity:0;
+    animation-name: showContent;
+    animation-duration: 350ms;
+    animation-delay: 200ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showContent {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+/* == TEXT SLIDE ANIMATION == */
+
+.price[open] > div {
+    animation-name: fadeDown;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeDown {
+    from {
+      opacity: 0;
+      height: 0;
+    }
+  
+    to {
+      opacity: 1;
+      height: 18vh;
+    }
+}
+
+
+/* ========== FLAVOUR ========== */
+.flavour {
+    width: 100%;
+    min-height: 80vh;
+}
+
+.grid {
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+
+.grid div img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+img ~ h5 {
+    font-family: var(--family-oswald);
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+
+h5 ~ p {
+    font-family: var(--family-open);
+    font-weight: 200;
+    font-size: 1em;
+    margin: 1rem 1.5rem 2rem;
+    text-align: center;
+
+}
+
+
+/* ========== DAIRY ========== */
+.dairy {
+    width: 100%;
+    min-height: 40vh;
+}
+
+/* ========== FOOTER ========== */
+
+footer {
+    width: 100%;
+    min-height: 50vh;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.footer {
+    margin-left: 3rem;
+}
+
+.address {
+    padding-top: 3rem;
+}
+
+.footer > p {
+    line-height: 2rem;
+    font-family: var(--family-oswald);
+}
+
+.form-email {
+    width: 250px;
+    height: 40px;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--white);
+    background-color: var(--black);
+    border: 3px solid var(--white);
+}
+
+.form-email::placeholder {
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.form-btn {
+    color: var(--white);
+    border:2px solid var(--white);
+    font-size: 1em;
+    width: 120px;
+    height: 40px;
+    margin-top: 1.5rem;
+}
+
+
+/* ================ MEDIA QUERIES =============== */
+
+/* ==========TABLETS========== */
+
+@media screen and (min-width: 481px) {
+
+}
+
+
+/* ==========SMALL SCREENS, LAPTOPS========== */
+
+@media screen and (min-width: 769px) {
+   
+    header svg {
+        display: none;    
+    }
+    
+    #navigation-menu {
+        background-color: transparent;
+        width: 30%;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;            
+    }
+
+    #navigation-menu a {
+        font-family: var(--family-oswald);
+        font-size: 1.5em;
+        margin: .5rem .2rem;
+        margin-right: 1rem;
+    }
+    
+   #navigation-menu svg {
+       display: none;
+   }
+
+    header a {
+        font-size: 2.2em;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        margin: 2rem 1.5rem 6rem;
+    }
+    
+
+    footer {
+        display: grid;
+        grid-template-columns: 380px 380px;
+        grid-template-rows: 150px 400px;    
+    }
+
+    .footer {
+        margin-left: 100px;
+    }
+
+     .footer .title {
+        margin-top: 80px;
+    } 
+
+    .footer .address {
+        padding-top: 0;
+    }
+   
+}
+
+/* ==========LARGE SCREENS, DESKTOPS========== */
+
+@media screen and (min-width: 1025px) {
+
+    header a {
+        font-size: 2.4em;
+    }
+
+    #navigation-menu a {
+        font-family: var(--family-oswald);
+        font-size: 1.5em;
+        margin-bottom: .5rem;
+        margin-left: 2rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;  
+    }
+    
+}
+
+/* ==========EXTRA LARGE SCREENS, TV========== */
+
+@media screen and (min-width: 1201px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr 1f1204
+        ;  
+    }
+}
