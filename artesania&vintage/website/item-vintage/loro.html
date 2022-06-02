@@ -5,36 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="co-authored by David Paulos, Raquel Illerías Gomez">
+    <meta name="author" content="Raquel Illerías">
     <meta name="description" content="Tienda Online de artesanía vintage. Especialistas en artículos de decoración en madera y porcelana.">
     <link rel="stylesheet" href="loro.css">
-    <link rel="shortcut icon" href="../images/icons/av-favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/icons/av-logo.png" type="image/x-icon">
     <script src="../hidemenu.js" async></script>
-    <title>Artesanía & Vintage</title>
+    <title>Artesanía y Vintage</title>
 </head>
 
 <body>
     <header>
         <div class="header">
-            <a href="../index.html"><img class="logo" src="../images/icons/logo-3.PNG" alt=""></a>
-            <img class="burger-menu" src="../images/icons/menu_black_24dp.svg" alt="">
-        </div>
-    </header>
-    <nav>
-        <a href="../index.html">INICIO</a>
-        <div class="categories">
-            <button class="cat-btn">
-                <a href="#" class="dropdown-cat">CATEGORÍAS<img class="icon-cat"
-                        src="../images/icons/expand-more.svg" alt=""></a>
-            </button>
-            <div class="dropdown-container">
-                <a class="sub-cat" href="../categorias/artesania/artesania.html">ARTESANÍA</a>
-                <a class="sub-cat" href="../categorias/arte/arte.html">ARTE</a>
-                <a class="sub-cat" href="../categorias/vintage/vintage.html">VINTAGE</a>
+            <a href="../index.html" id="home-logo"><img src="../images/icons/av-logo.png" alt=""></a>
+            <h1>ARTESANIA Y VINTAGE</h1>
+            <div id="open-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40">
+                    <path fill="#000000"
+                        d="M7.5 36Q6.85 36 6.425 35.575Q6 35.15 6 34.5Q6 33.85 6.425 33.425Q6.85 33 7.5 33H40.5Q41.15 33 41.575 33.425Q42 33.85 42 34.5Q42 35.15 41.575 35.575Q41.15 36 40.5 36ZM7.5 25.5Q6.85 25.5 6.425 25.075Q6 24.65 6 24Q6 23.35 6.425 22.925Q6.85 22.5 7.5 22.5H40.5Q41.15 22.5 41.575 22.925Q42 23.35 42 24Q42 24.65 41.575 25.075Q41.15 25.5 40.5 25.5ZM7.5 15Q6.85 15 6.425 14.575Q6 14.15 6 13.5Q6 12.85 6.425 12.425Q6.85 12 7.5 12H40.5Q41.15 12 41.575 12.425Q42 12.85 42 13.5Q42 14.15 41.575 14.575Q41.15 15 40.5 15Z" />
+                </svg>
             </div>
         </div>
-        <a href="../blog/blog.html">BLOG</a>
-        <a href="../contacto/contacto.html">CONTACTO</a>
+    </header>
+
+    <nav id="navigation-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" id="close-menu" height="48" width="48">
+            <path fill="#000000"
+                d="M24 26.1 13.5 36.6Q13.05 37.05 12.45 37.05Q11.85 37.05 11.4 36.6Q10.95 36.15 10.95 35.55Q10.95 34.95 11.4 34.5L21.9 24L11.4 13.5Q10.95 13.05 10.95 12.45Q10.95 11.85 11.4 11.4Q11.85 10.95 12.45 10.95Q13.05 10.95 13.5 11.4L24 21.9L34.5 11.4Q34.95 10.95 35.55 10.95Q36.15 10.95 36.6 11.4Q37.05 11.85 37.05 12.45Q37.05 13.05 36.6 13.5L26.1 24L36.6 34.5Q37.05 34.95 37.05 35.55Q37.05 36.15 36.6 36.6Q36.15 37.05 35.55 37.05Q34.95 37.05 34.5 36.6Z" />
+        </svg>
+        <ul class="menu">
+            <li class="show-text"><a href="../index.html">Inicio</a></li>
+            <li class="show-text slide-down"> <a href="../categorias/categorias.html">Categorias &#9662;</a>
+                <ul class="categories-menu">
+                    <li><a href="../categorias/artesania/artesania.html">Artesania</a></li>
+                    <li><a href="../categorias/arte/arte.html">Arte</a></li>
+                    <li><a href="../categorias/vintage/vintage.html">Vintage</a></li>
+                </ul>
+            </li>
+            <li class="show-text"> <a href="../blog/blog.html">Blog</a></li>
+            <li class="show-text"><a href="../contacto/contacto.html">Contacto</a></li>
+        </ul>
+
     </nav>
     <main>
         <div class="description-container">
